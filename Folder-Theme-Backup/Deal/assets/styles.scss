@@ -972,3 +972,40 @@ footer {
   right:0px;
   left:0px;
 }
+/*Owl caroul*/
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  width: 20px !important;
+  height: 20px !important;
+  background: transparent !important;
+  line-height: 20px !important;
+  text-align: center;
+  border: none;
+  top: 60% !important;
+}
+
+.owl-nav .owl-prev:before, .owl-nav .owl-next:before {
+  height: 20px !important;
+  width: 20px !important;
+  line-height: 20px !important;
+  color: #333;
+  border: none;
+  background: transparent !important;
+}
+.owl-nav .owl-prev {
+  left: -30px;
+}
+.owl-nav .owl-prev:before {
+  content: "" !important;
+  font-family: 'FontAwesome';
+  font-size: 18px;
+}
+
+.owl-nav .owl-next {
+  right: -30px;
+}
+
+.owl-nav .owl-next:before {
+  content: "" !important;
+  font-family: 'FontAwesome';
+  font-size: 18px;
+}
