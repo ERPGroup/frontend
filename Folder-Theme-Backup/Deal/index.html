@@ -9,11 +9,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/owl.theme.default.css" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/font-awesome.min.css">
+    <!--Zoom images-->
+    <link rel="stylesheet" href="assets/cloudzoom.css">
+    <link rel="stylesheet" href="assets/jquery.bxslider.css">
+    <!--End zoom-->
+    <link rel="stylesheet" href="assets/fotorama.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
+    <script type="text/javascript" src="assets/jquery-2.2.4.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +30,73 @@
         <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
     </a>
     <!--End hotline-->
+
+    <!--Zoom image-->
+    <div style="display:none">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="product__view__image--list">
+                <ul class="bxslider">
+                    <li>
+                        <div class="thumb_image_quickview">
+                            <img class="cloudzoom" id="zoom1" data-cloudzoom="zoomSizeMode:'image',zoomPosition:'3', zoomOffsetX:0"
+                                src="images/product_2.png" alt="#" />
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <div id="bx-pager" class="bx-pager owl-carousel">
+                        <a data-slide-index="0" href=""><img src="images/product_1.jpg" alt="#" class="img-responsive" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right_content">
+            <h2>Iphones 7S</h2>
+            <h3>3.359.000 đ<span>4.000.000 đ</span> </h3>
+            <p>Người bán: <a href="#">Tablet plaza </a>| Tình trạng: <a href="#">Còn hàng</a></p>
+            <p>Mô tả ngắn sản phẩm: <br>Sản phẩm còn zin 100%, hàng chính hãng, chất lượng cao</p>
+            <form class="form_quickview" action="#" method="post">
+                <input type="hidden" name="id_product" value="#">
+                <button class="button_add">-</button>
+                <input value="1" class="input_add" maxlength="3" size="1" name="quantity" id="quantity">
+                <button class="button_add">+</button>
+                <button type="submit" class="btn_buy">Mua hàng</button>
+            </form>
+        </div>
+    </div>
+    <!--End zoom-->
+    <!--Popup Quickview-->
+    <div class="popup_quickview" id="popup_quickview" style="display:none;">
+        <div class="content_popup_qv">
+            <div id="close_x" class="close_x">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class=" col-xs-5 col-sm-5 col-md-5 col-lg-5 fotorama" data-width="700" data-maxwidth="100%" data-ratio="16/9"
+                data-allowfullscreen="true" data-nav="thumbs">
+
+                <a href="images/product_1.jpg"> <img src="images/product_1.jpg"></a>
+
+
+                <a href="images/product_1.jpg"> <img src="images/product_1.jpg"></a>
+
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right_content">
+                <h2>Iphones 7S</h2>
+                <h3>3.359.000 đ<span>4.000.000 đ</span> </h3>
+                <p>Người bán: <a href="#">Tablet plaza </a>| Tình trạng: <a href="#">Còn hàng</a></p>
+                <p>Mô tả ngắn sản phẩm: <br>Sản phẩm còn zin 100%, hàng chính hãng, chất lượng cao</p>
+                <form class="form_quickview" action="#" method="post">
+                    <input type="hidden" name="id_product" value="#">
+                    <button class="button_add">-</button>
+                    <input value="1" class="input_add" maxlength="3" size="1" name="quantity" id="quantity">
+                    <button class="button_add">+</button>
+                    <button type="submit" class="btn_buy">Mua hàng</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!--Endpopup-->
     <!--Fixed Menu-->
     <div class="fixed_menu_top" id="fixed_menu_top" style="display:none;">
         <div class="container">
@@ -94,7 +167,7 @@
                         </li>
                         <li>
                             <img src="images/avatar.png" alt="">
-                            <a href="#">Đăng ký</a> |
+                            <a href="register.html">Đăng ký</a> |
                             <a href="#">Đăng nhập</a>
                         </li>
                     </ul>
@@ -370,6 +443,15 @@
                                 <span class="sales_percent">
                                     -15%
                                 </span>
+                            </div>
+                            <div class="quick_view">
+                                <form action="#" method="post">
+                                    <button type="submit" class="btn_buy">
+                                        Mua hàng
+                                    </button>
+                                    <a onclick="quick_view();" href=""> <button onclick="return false;" class="btn_quickview"><i
+                                                class="fa fa-search"></i></button></a>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -914,10 +996,16 @@
         </div>
     </footer>
     <button onclick="topFunction()" id="btnTop" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-    <script src="assets/jquery-3.3.1.min.js"></script>
     <script src="assets/owl.carousel.js"></script>
     <script src="assets/bootstrap.min.js"></script>
     <script src="assets/custom.js"></script>
+    <script src="assets/slider.js"></script>
+    <!--Zoom image-->
+    <script src="assets/jquery.bxslider.min.js"></script>
+    <script src="assets/cloudzoom.js"></script>
+    <script src="assets/fotorama.js"></script>
+    <script src="assets/product_script.js"></script>
+    <!--End zoom-->
 </body>
 
 </html>
