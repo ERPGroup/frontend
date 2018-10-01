@@ -580,6 +580,28 @@ $('.owl-product-hot').owlCarousel({
     }
   }
 })
+$('.owl-product-relate').owlCarousel({
+  loop: true,
+  margin: 10,
+	nav: true,
+	dots:false,
+	autoplay: true,
+  autoplayTimeout: 5000,
+  responsive: {
+    0: {
+      items: 2
+    },
+    767: {
+      items: 2
+    },
+    992: {
+      items: 3
+    },
+    1200: {
+      items: 4
+    }
+  }
+})
 $('.owl-product-buy-more').owlCarousel({
   loop: true,
   margin: 10,

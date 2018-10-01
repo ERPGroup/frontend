@@ -54,7 +54,32 @@ function fixMenuMobile () {
     header.classList.remove('sticky')
   }
 }
-
+function clickShowSearch(a){
+  var x = document.getElementById(a)
+  if (x.style.display == 'block') {
+    x.style.display = 'none';
+  }else {
+    x.style.display = 'block'
+  }
+  $('html,body').animate({
+    scrollTop: $("#goto_move").offset().top},
+    'slow');
+}
+function clickShowCategory(a)
+{
+  var x = document.getElementById(a)
+  if (x.style.display == 'block') {
+    x.style.display = 'none';
+    x.style.position = 'relative';
+  }else {
+    x.style.display = 'block';
+    x.style.position = 'absolute';
+    x.style.left ='0';
+    x.style.right ='0';
+    x.style.zIndex ='9999';
+    x.style.background = 'white';
+  }
+}
 function clickShowFooter (a) {
   var x = document.getElementById(a)
   if (x.style.display == 'block') {
