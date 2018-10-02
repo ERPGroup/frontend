@@ -1711,7 +1711,7 @@ footer .copyrights a {
   padding: 0 5px;
 }
 
-@media screen and (min-width: 320px) and (max-widtH: 568px) {
+@media screen and (min-width: 320px) and (max-width: 568px) {
   .side_bar_collection ul li a i {
     padding: 0px;
   }
@@ -2032,5 +2032,155 @@ footer .copyrights a {
 
 .product .content_product .product_relate {
   margin-bottom: 15px;
+}
+
+.template_cart h2 {
+  padding: 0 15px;
+}
+
+.template_cart .tbl_cart {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.template_cart .tbl_cart tr th {
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.template_cart .tbl_cart tr td {
+  max-width: 140px;
+}
+
+.template_cart .tbl_cart tr td .button_add {
+  width: 25px;
+  height: 25px;
+}
+
+.template_cart .tbl_cart tr td input {
+  text-align: center;
+}
+
+.template_cart .tbl_cart .thumb_cart {
+  height: 80px;
+  position: relative;
+  min-width: 40px;
+}
+
+.template_cart .tbl_cart .thumb_cart img {
+  width: auto !important;
+  max-height: 85%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.template_cart .tbl_cart a {
+  color: black;
+}
+
+.template_cart .tbl_cart a:hover {
+  color: #f58634;
+  font-weight: bold;
+}
+
+.template_cart .tbl_cart a i {
+  padding-right: 5px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .template_cart .submit_sale {
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 10px 70px;
+  }
+}
+
+.template_cart .calculator {
+  margin: 15px;
+  border: 1px solid #ebebeb;
+  padding-bottom: 25px;
+}
+
+.template_cart .calculator h2 {
+  margin: 10px 0px;
+  color: #f58634;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .template_cart .calculator h2 {
+    font-size: 24px;
+  }
+}
+
+.template_cart .calculator .to_pay {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .template_cart .calculator .to_pay {
+    font-size: 16px;
+  }
+}
+
+.template_cart .calculator h4 {
+  line-height: 34px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .template_cart .calculator h4 {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+  .template_cart .calculator h4 {
+    display: inline-block;
+  }
+}
+
+.template_cart .calculator .btn_buy {
+  padding: 15px 70px;
+  font-size: 18px;
+  color: white !important;
+}
+
+.template_cart .calculator .btn_buy:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.template_cart .calculator .btn_continue {
+  background-color: #828282;
+  padding: 15px 40px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 567px) {
+  .template_cart .calculator .btn_continue {
+    padding: 15px 41px;
+  }
+}
+
+.template_cart .calculator a:hover {
+  font-weight: bold;
+}
+
+.template_cart .calculator span, .template_cart .calculator label {
+  line-height: 34px;
+}
+
+.template_cart .calculator input {
+  height: 34px;
 }
 /*# sourceMappingURL=styles.css.map */

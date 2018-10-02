@@ -261,13 +261,11 @@ img {
 /*main_slider*/
 
 .left_category {
-  @media screen and (min-width:320px) and (max-width:767px)
-  {
-    display:none;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
   }
-  @media screen and (min-width:768px)
-  {
-    display:block!important;
+  @media screen and (min-width: 768px) {
+    display: block !important;
   }
   h2 {
     font-size: 22px;
@@ -294,7 +292,6 @@ img {
       }
     }
   }
- 
 }
 
 .slider {
@@ -1363,9 +1360,8 @@ footer {
         color: #333;
         i {
           padding: 0 5px;
-          @media screen and (min-width:320px) and (max-widtH: 568px)
-          {
-            padding:0px;
+          @media screen and (min-width: 320px) and (max-width: 568px) {
+            padding: 0px;
           }
         }
         &:hover {
@@ -1382,19 +1378,17 @@ footer {
 }
 .collection {
   margin-bottom: 15px;
-  .button_view_search
-  {
-    font-size:22px;
- 
-    float:right;
-    z-index:999;
-    @media screen and (min-width:768px)
-    {
-      display:none;
+  .button_view_search {
+    font-size: 22px;
+
+    float: right;
+    z-index: 999;
+    @media screen and (min-width: 768px) {
+      display: none;
     }
-    i{
-      &:hover{
-      cursor:pointer;  
+    i {
+      &:hover {
+        cursor: pointer;
       }
     }
   }
@@ -1409,9 +1403,8 @@ footer {
   border-top: 1px solid #ebebeb;
   input {
     display: inline-block;
-    @media screen and (min-width:320px) and (max-width:1024px)
-    {
-      width:100%;
+    @media screen and (min-width: 320px) and (max-width: 1024px) {
+      width: 100%;
     }
   }
   ul {
@@ -1477,9 +1470,8 @@ footer {
       .thumb_image_quickview {
         height: 300px;
         position: relative;
-        @media screen and (min-width:320px)and (max-width:568px)
-        {
-          height:200px;
+        @media screen and (min-width: 320px) and (max-width: 568px) {
+          height: 200px;
         }
         img {
           width: auto !important;
@@ -1608,7 +1600,7 @@ footer {
         margin-bottom: 15px;
       }
       span {
-        padding:0px;
+        padding: 0px;
       }
       .detail_product {
         font-size: 16px;
@@ -1635,6 +1627,138 @@ footer {
     }
     .product_relate {
       margin-bottom: 15px;
+    }
+  }
+}
+.template_cart {
+  h2
+  {
+    padding: 0 15px;
+  }
+  .tbl_cart {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    tr {
+      th {
+        text-align: center;
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+      }
+      td {
+        max-width:140px;
+        .button_add {
+          width: 25px;
+          height: 25px;
+        }
+        input {
+          text-align: center;
+        }
+      }
+    }
+    .thumb_cart {
+      height: 80px;
+      position: relative;
+      min-width: 40px;
+      img {
+        width: auto !important;
+        max-height: 85%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+    a {
+      color: black;
+      &:hover {
+        color: #f58634;
+        font-weight: bold;
+      }
+      i {
+        padding-right: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+  .submit_sale
+  {
+    @media screen and (min-width:320px) and (max-width:567px)
+    {
+      margin-left:15px;
+      margin-top:15px;
+      padding: 10px 70px;
+    }
+  }
+  .calculator {
+    margin: 15px;
+    border: 1px solid #ebebeb;
+    padding-bottom: 25px;
+    h2 {
+      margin: 10px 0px;
+      color: #f58634;
+      text-align: center;
+      @media screen and (min-width:320px) and (max-width:567px)
+      {
+        font-size:24px;
+      }
+    }
+    .to_pay {
+      font-size: 18px;
+      @media screen and (min-width:320px) and (max-width:567px)
+      {
+        font-size:16px;
+      }
+    }
+    h4 {
+      line-height: 34px;
+      font-weight:bold; 
+      font-style: italic;
+      
+      @media screen and (min-width:320px) and (max-width:567px)
+      {
+       text-align:center;
+       display:block;
+      }
+      @media screen and (min-width:568px) and (max-width:1024px)
+      {
+        display:inline-block;
+      }
+    }
+    
+    .btn_buy {
+      padding: 15px 70px;
+      font-size: 18px;
+      color:white!important;
+      &:hover {
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .btn_continue
+    {
+      background-color: #828282;
+      padding: 15px 40px;
+      @media screen and (min-width:320px) and (max-width:567px)
+      {
+        padding: 15px 41px;
+      }
+    }
+    a {
+      &:hover {
+      
+        font-weight: bold;
+      }
+    }
+    span, label{
+      line-height:34px;
+    }
+    input
+    {
+      height:34px;
     }
   }
 }
