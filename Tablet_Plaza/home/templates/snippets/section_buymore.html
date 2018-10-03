@@ -1,0 +1,15 @@
+{% load staticfiles %}
+ <!--Buy more-->
+    <div class="buy_more">
+        <div class="container">
+            <div class="row">
+                <h3 class="title_deal">Sản phẩm bán chạy | <a class="view_more" href="#">Xem thêm</a></h3>
+                <div class="owl-product-buy-more owl-carousel owl-theme">
+                    <div class="item">
+                        {% include "snippets/product-grid-item.html" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End buy more-->
