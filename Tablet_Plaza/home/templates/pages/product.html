@@ -27,9 +27,17 @@ Chi tiết sản phẩm
                                                 src="{% static 'images/product_2.png' %}" alt="#" />
                                         </div>
                                     </li>
+                                    <li>
+                                        <div class="thumb_image_quickview">
+                                            <img class="cloudzoom" id="zoom1" data-cloudzoom="zoomSizeMode:'image',zoomPosition:'3', zoomOffsetX:0"
+                                                src="{% static 'images/product_2.png' %}" alt="#" />
+                                        </div>
+                                    </li>
                                 </ul>
-                                <div id="bx-pager" class="bx-pager owl-carousel">
+                                <div id="bx-pager" class="bx-pager owl-carousel" data-lg-items="4" data-nav="true" data-md-items="3" data-sm-items="4" data-xs-items="2" data-xss-items="2" data-margin="0">
                                     <a data-slide-index="0" href=""><img src="{% static 'images/product_1.jpg' %}" alt="#"
+                                            class="img-responsive" /></a>
+                                    <a data-slide-index="1" href=""><img src="{% static 'images/product_1.jpg' %}" alt="#"
                                             class="img-responsive" /></a>
                                 </div>
                             </div>

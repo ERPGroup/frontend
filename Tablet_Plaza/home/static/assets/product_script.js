@@ -14,13 +14,6 @@ $('.bxslider').bxSlider({
 		$('.bxslider > li').eq(1).addClass('active-slide')
 	},
 });
-jQuery("#bx-pager").owlCarousel({
-	items : 4,
-	itemsDesktop : [1024,4],
-	itemsDesktopSmall : [900,4],
-	itemsTablet: [600,4],
-	itemsMobile : [320,4],nav : true,navText: ['', ''],slideSpeed : 500,pagination : false
-});
 CloudZoom.quickStart();
 $.extend($.fn.CloudZoom.defaults, {
 	zoomPosition: 'inside',

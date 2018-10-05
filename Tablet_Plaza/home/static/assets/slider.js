@@ -535,185 +535,139 @@
   $.fn.owlCarousel.Constructor.Plugins['owl2row'] = Owl2row
 })(window.Zepto || window.jQuery, window, document)
 // end of owl2row plugin
+// end of owl2row plugin
+$(document).ready(function ($) {
+	"use strict";
+	dl_owl();
+})
+function dl_owl() { 
+	$('.owl-carousel:not(.not-aweowl)').each( function(){
+		var xss_item = $(this).attr('data-xss-items');
+		var xs_item = $(this).attr('data-xs-items');		
+		var sm_item = $(this).attr('data-sm-items');
+		var md_item = $(this).attr('data-md-items');
+		var lg_item = $(this).attr('data-lg-items');
+		var lgg_item = $(this).attr('data-lgg-items');
+		var margin=$(this).attr('data-margin');
+		var dot=$(this).attr('data-dot');
+		var nav=$(this).attr('data-nav');
+		var loop = $(this).attr('data-loop');
+		var autoplay = $(this).attr('data-autoplay');
+		var autopause = $(this).attr('data-autopause');
+		if (typeof margin !== typeof undefined && margin !== false) {    
+		} else{
+			margin = 30;
+		}
+		if (typeof xss_item !== typeof undefined && xss_item !== false) {    
+		} else{
+			xss_item = 1;
+		}
+		if (typeof xs_item !== typeof undefined && xs_item !== false) {    
+		} else{
+			xs_item = 1;
+		}
+		if (typeof sm_item !== typeof undefined && sm_item !== false) {    
 
-$('.owl-slider').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  dots:false,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  responsive: {
-    0: {
-      items: 1
-    },
-    767: {
-      items: 1
-    },
-    992: {
-      items: 1
-    },
-    1200: {
-      items: 1
-    }
-  }
-})
-$('.owl-product-hot').owlCarousel({
-  loop: true,
-  margin: 10,
-	nav: true,
-	dots:false,
-	autoplay: true,
-  autoplayTimeout: 5000,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-product-relate').owlCarousel({
-  loop: true,
-  margin: 10,
-	nav: true,
-	dots:false,
-	autoplay: true,
-  autoplayTimeout: 5000,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-product-buy-more').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
+		} else{
+			sm_item = 3;
+		}	
+		if (typeof md_item !== typeof undefined && md_item !== false) {    
+		} else{
+			md_item = 3;
+		}
+		if (typeof lg_item !== typeof undefined && lg_item !== false) {    
+		} else{
+			lg_item = 4;
+		}
+		if (typeof lgg_item !== typeof undefined && lg_item !== false) {    
+		} else{
+			lgg_item = lg_item;
+		}
+		if (typeof dot !== typeof undefined && dot !== true) {   
+			dot = dot;
+		} else{
+			dot = false;
+		}
+		if (typeof nav !== typeof undefined && nav !== true) {   
+			nav = nav;
+		} else{
+			nav = false;
+		}
+		if (typeof loop !== typeof undefined && loop !== true) {   
+			loop = loop;
+		} else{
+			loop = false;
+		}
+		if (typeof autoplay !== typeof undefined && autoplay !== true) {   
+			autoplay = autoplay;
+		} else{
+			autoplay = false;
+		}
+		if (typeof autopause !== typeof undefined && autopause !== true) {   
+			autopause = autopause;
+		} else{
+			autopause = false;
+		}
+		$(this).owlCarousel({
+			loop:loop,
+			margin:Number(margin),
+			responsiveClass:true,
+			dots:dot,
+			autoHeight: false,
+			nav:nav,
+			autoplay:autoplay,
+    		autoplayTimeout:5000,
+    		autoplayHoverPause:autopause,	
+			responsive:{
+				0:{
+					items:Number(xss_item),
+					margin: 15
+				},
+				543:{
+					items:Number(xs_item),
+					margin: 15
+				},
+				768:{
+					items:Number(sm_item)				
+				},
+				992:{
+					items:Number(md_item)				
+				},
+				1200:{
+					items:Number(lg_item)				
+				},
+				1500:{
+					items:Number(lgg_item)				
+				}
+			}
+		})
+	})
+} window.dl_owl=dl_owl;
 $('.owl-product-sales').owlCarousel({
   loop: false,
   margin: 10,
   nav: true,
   owl2row: true,
   responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-product-phone').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-product-ipad').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-product-laptop').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 2
-    },
-    992: {
-      items: 3
-    },
-    1200: {
-      items: 4
-    }
-  }
-})
-$('.owl-brand').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 2
-    },
-    767: {
-      items: 3
-    },
-    992: {
-      items: 5
-    },
-    1200: {
-      items: 7
-    }
+	0:{
+		items:2,
+		margin: 15
+	},
+	543:{
+		items:2,
+		margin: 15
+	},
+	768:{
+		items:3				
+	},
+	992:{
+		items:3				
+	},
+	1200:{
+		items:4			
+	},
+	1500:{
+		items:4				
+	}
   }
 })

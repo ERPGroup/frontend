@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-size: 13px;
 }
 
@@ -568,7 +568,6 @@ img {
     background: rgb(153, 108, 0);
     width: 141px;
     height: 80px;
-    margin-right: 16px;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1046,6 +1045,9 @@ footer {
 .slider {
   .owl-nav {
     display: none;
+    @media screen and (max-width:1023px){
+      display:block;
+    }
   }
   &:hover .owl-nav {
     display: block !important;
@@ -1059,6 +1061,10 @@ footer {
   height: 40px;
   text-align: center;
   line-height: 35px;
+  @media screen and (min-width:320px) and (max-width:767px)
+  {
+    top:28%;
+  }
   .owl-prev {
     left: 0px;
     position: absolute;
@@ -1631,8 +1637,7 @@ footer {
   }
 }
 .template_cart {
-  h2
-  {
+  h2 {
     padding: 0 15px;
   }
   .tbl_cart {
@@ -1647,7 +1652,7 @@ footer {
         padding-bottom: 5px;
       }
       td {
-        max-width:140px;
+        max-width: 140px;
         .button_add {
           width: 25px;
           height: 25px;
@@ -1684,81 +1689,185 @@ footer {
       }
     }
   }
-  .submit_sale
-  {
-    @media screen and (min-width:320px) and (max-width:567px)
-    {
-      margin-left:15px;
-      margin-top:15px;
+  .submit_sale {
+    @media screen and (min-width: 320px) and (max-width: 567px) {
+      margin-left: 15px;
+      margin-top: 15px;
       padding: 10px 70px;
     }
   }
   .calculator {
-    margin: 15px;
-    border: 1px solid #ebebeb;
-    padding-bottom: 25px;
+    position: relative;
+    min-height:65px;
+    margin-top:15px;
+    text-align: right;
     h2 {
       margin: 10px 0px;
       color: #f58634;
       text-align: center;
-      @media screen and (min-width:320px) and (max-width:567px)
-      {
-        font-size:24px;
+      @media screen and (min-width: 320px) and (max-width: 567px) {
+        font-size: 24px;
       }
     }
     .to_pay {
       font-size: 18px;
-      @media screen and (min-width:320px) and (max-width:567px)
-      {
-        font-size:16px;
+      @media screen and (min-width: 320px) and (max-width: 567px) {
+        font-size: 16px;
       }
     }
     h4 {
       line-height: 34px;
-      font-weight:bold; 
+      font-weight: bold;
       font-style: italic;
-      
-      @media screen and (min-width:320px) and (max-width:567px)
-      {
-       text-align:center;
-       display:block;
+
+      @media screen and (min-width: 320px) and (max-width: 567px) {
+        text-align: center;
+        display: block;
       }
-      @media screen and (min-width:568px) and (max-width:1024px)
-      {
-        display:inline-block;
+      @media screen and (min-width: 568px) and (max-width: 1024px) {
+        display: inline-block;
       }
     }
-    
+
     .btn_buy {
       padding: 15px 70px;
       font-size: 18px;
-      color:white!important;
+      color: white !important;
+      @media screen and (min-width: 320px) and (max-width: 567px) {
+        padding: 15px 25px;;
+      }
       &:hover {
         color: white;
         font-weight: bold;
       }
     }
-    .btn_continue
-    {
+    .btn_continue {
       background-color: #828282;
       padding: 15px 40px;
-      @media screen and (min-width:320px) and (max-width:567px)
-      {
-        padding: 15px 41px;
+      @media screen and (min-width: 320px) and (max-width: 567px) {
+        padding: 15px 10px;
       }
     }
     a {
       &:hover {
-      
         font-weight: bold;
       }
     }
-    span, label{
-      line-height:34px;
+    span,
+    label {
+      line-height: 34px;
     }
-    input
-    {
-      height:34px;
+    input {
+      height: 34px;
     }
   }
+}
+.profile_user {
+  .tbl_cart {
+    @media screen and (min-width:320px) and (max-width:767px)
+    {
+      font-size: 12px;
+    }
+    tr {
+      td {
+        vertical-align: top;
+      }
+    }
+  }
+ 
+  .title_user {
+    margin: 10px 0px;
+
+    text-align: center;
+  }
+  form {
+    .errors_id,
+    .errors_pw,
+    .errors_rpw,
+    .errors_fn {
+      line-height: 34px;
+      text-align: left;
+      color: #f70302;
+      font-weight: bold;
+    }
+    label {
+      font-size: 14px;
+      line-height: 34px;
+      text-align: right;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+        margin: 0px;
+      }
+    }
+    a {
+      font-size: 14px;
+      line-height: 34px;
+      text-align: left;
+      color: #333;
+      &:hover {
+        color: #f58634;
+      }
+    }
+    .group_button {
+      .btn_registier {
+        width: 100%;
+      }
+    }
+    input[type="checkbox"] {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 0px;
+      margin-right: 10px;
+    }
+    .mail_to {
+      margin-top: 10px;
+      label {
+        font-weight: normal;
+        float: left;
+        text-align: left;
+        line-height: 20px;
+      }
+    }
+    .remember_me {
+      margin-top: 10px;
+      label {
+        font-weight: normal;
+        float: left;
+        text-align: left;
+        line-height: 20px;
+      }
+      a {
+        font-weight: normal;
+        float: right;
+        text-align: left;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.a_center {
+  text-align: center !important;
+}
+.to_merchant {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 99;
+  @media screen and (min-width:320px) and (max-width:767px)
+  {
+    right:30px;
+    top:-30px;
+  }
+}
+.no_padding_desktop_1280
+{
+  @media screen and (min-width:1200px)
+  {
+    padding-left:0px!important;
+    padding-right:0px!important;
+  }
+}
+.border_around{
+  border:1px solid #ebebeb;
 }

@@ -9,12 +9,11 @@ Giỏ hàng
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <table class="tbl_cart">
             <tr>
-                <th>No.1</th>
-                <th>Sản phẩm</th>
+                <th colspan="2">Sản phẩm</th>
                 <th class="hidden-xs">Giá</th>
                 <th>Số lượng</th>
                 <th class="hidden-xs">Tổng cộng</th>
-                <th class="hidden-xs"> Tác vụ</th>
+                <th class="hidden-xs"> Xóa</th>
             </tr>
             <tr>
                 <td class="thumb_cart"> <img src="{% static 'images/product_1.jpg' %}"></td>
@@ -26,39 +25,22 @@ Giỏ hàng
                     <button class="button_add">+</button>
                 </td>
                 <td class="hidden-xs">10.790.000 ₫</td>
-                <td class="hidden-xs"><a href="#"><i class="fa fa-save"></i></a>
+                <td class="hidden-xs">
                     <a href="#"><i class="fa fa-close"></i></a>
                 </td>
             </tr>
             <tr class="hidden-sm hidden-md hidden-lg">
                 <td colspan="2">Giá: <b>10.790.000 ₫</b></td>
-                <td><a href="#"><i class="fa fa-save"></i></a>
-                    <a href="#"><i class="fa fa-close"></i></a></td>
+                <td><a href="#"><i class="fa fa-close"></i></a></td>
             </tr>
         </table>
         <div class="clearfix"></div>
     </div>
     <div class="clearfix"></div>
     <hr>
-    <div class="col-lg-6 calculator">
-        <h2>Thông tin thanh toán</h2>
-        <span class="col-lg-3">Tạm tính: </span><label>10.790.000 VND</label>
-        <div class="clearfix"></div>
-        <span class="col-lg-3">Phí vận chuyện: </span><label>0 VND</label>
-        <div class="clearfix"></div>
-        <span class="col-lg-3">Mã khuyến mãi: </span> <input size="11" type="text" name="voucher" id="voucher"> <br
-            class="hidden_desktop"> <a class="submit_sale btn btn-warning" href="">Áp dụng</a>
-        <div class="clearfix"></div>
-        <hr>
-        <span class="col-lg-3 to_pay">Thành tiền: </span>
-        <h4>10.790.000 VND</h4>
-        <hr>
-        <a href="#" class="btn_buy">Thanh toán</a>
-        <br class="hidden_desktop">
-        <br class="hidden_desktop">
-        <br class="hidden_desktop">
-        <a href="#" class="btn_buy btn_continue">Tiếp tục mua hàng <i style="padding-left:15px;" class="fa fa-arrow-right hidden-xs"></i>
-        </a>
+    <div class="col-lg-12 calculator">
+        <a href="/payment" class="btn_buy">Thanh toán</a>
+        <a href="/collection" class="btn_buy btn_continue">Tiếp tục mua hàng <i style="padding-left:15px;" class="fa fa-arrow-right hidden-xs"></i> </a>
     </div>
     <div class="clearfix"></div>
 </div>

@@ -13,3 +13,11 @@ def product(request):
     return render(request,'pages/product.html')
 def cart(request):
     return render(request,'pages/cart.html')
+def history_order(request):
+    return render(request,'pages/history_order.html')
+def order_detail(request):
+    return render(request,'pages/order_detail.html')
+def profile(request):
+    return render(request,'pages/profile.html')
+def payment(request):
+    return render(request,'pages/payment.html')

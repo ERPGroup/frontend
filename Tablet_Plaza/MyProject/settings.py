@@ -25,8 +25,7 @@ SECRET_KEY = 'o*(h7xd3h=ejfytg^ono5i56vx&%81i^f3s*ks_%%g@v^2+jds'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost','deftnt.pythonanywhere.com']
 
 # Application definition
 
@@ -119,3 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/deftnt/MyFristAppPython/static'
